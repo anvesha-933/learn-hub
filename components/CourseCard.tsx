@@ -1,5 +1,5 @@
-
-
+"use client";
+import { motion } from "framer-motion";
 import { FaReact, FaJs } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 const iconMap: Record<string, React.ReactNode> = {
@@ -35,10 +35,15 @@ export default function CourseCard({
 </div>
 
       <div className="w-full bg-slate-700 rounded-full h-3">
-    <div
-  className="bg-blue-500 h-3 rounded-full transition-all duration-500"
-  style={{ width: `${progress}%` }}
-/>
+       <motion.div
+    className="bg-blue-500 h-3 rounded-full"
+    initial={{ width: 0 }}
+    animate={{ width: `${progress}%` }}
+    transition={{
+      duration: 1.5,
+      ease: "easeOut",
+    }}
+  />
       </div>
     
 

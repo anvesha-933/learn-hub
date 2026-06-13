@@ -1,7 +1,8 @@
 import React from 'react';
-
+import UserGreeting from "./greeting";
 // 1. Define what properties this card expects to receive
 type WelcomeCardProps = {
+  
   totalCourses: number;
   completedCourses: number;
   inProgressCourses: number;
@@ -16,9 +17,7 @@ export default function WelcomeCard({
   return (
     <div className="bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-700">
       <div className="max-w-xl">
-        <h1 className="text-3xl font-bold text-white mb-2">
-          Welcome back, Student! 👋
-        </h1>
+        <UserGreeting />
         <p className="text-slate-400 mb-6">
           Great job! You are making steady progress in your learning path. Keep up the momentum!
         </p>
